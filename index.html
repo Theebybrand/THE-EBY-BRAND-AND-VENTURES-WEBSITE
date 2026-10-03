@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>THE EBY BRAND AND VENTURES</title>
+
+  <meta name="description"
+        content="THE EBY BRAND AND VENTURES - A trusted and customer-focused business committed to quality, reliability and excellent service.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #faf8f3;
+    }
+
+    /* NAVIGATION */
+    header {
+      background: #151515;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #d7ad4b;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #d7ad4b;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        linear-gradient(
+          rgba(21,21,21,0.85),
+          rgba(21,21,21,0.85)
+        ),
+        linear-gradient(135deg, #292929, #b18b38);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 span {
+      color: #d7ad4b;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 700px;
+      margin: 0 auto 35px;
+      color: #f0f0f0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s ease;
+      margin: 5px;
+    }
+
+    .btn-primary {
+      background: #d7ad4b;
+      color: #151515;
+    }
+
+    .btn-primary:hover {
+      background: #f0c75e;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #d7ad4b;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: #d7ad4b;
+      color: #151515;
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 85px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #171717;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #666;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .about-card {
+      background: #151515;
+      color: white;
+      padding: 45px;
+      border-radius: 12px;
+      border-left: 6px solid #d7ad4b;
+    }
+
+    .about-card h3 {
+      color: #d7ad4b;
+      margin-bottom: 15px;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #faf8f3;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .service-icon {
+      width: 65px;
+      height: 65px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: #151515;
+      color: #d7ad4b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* WHY US */
+    .why-us {
+      background: #151515;
+      color: white;
+    }
+
+    .why-us .section-title h2 {
+      color: white;
+    }
+
+    .why-us .section-title p {
+      color: #bbb;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .why-card .number {
+      font-size: 38px;
+      font-weight: 800;
+      color: #d7ad4b;
+      margin-bottom: 10px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      background: #faf8f3;
+      padding: 50px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .email {
+      display: inline-block;
+      font-size: 18px;
+      color: #151515;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 25px;
+    }
+
+    .email:hover {
+      color: #b18b38;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #101010;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: #d7ad4b;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-box {
+        padding: 35px 20px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav-container">
+
+      <div class="logo">
+        THE EBY BRAND
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        THE EBY <span>BRAND</span>
+        AND VENTURES
+      </h1>
+
+      <p>
+        Building a trusted brand through quality,
+        reliability and excellent customer service.
+      </p>
+
+      <a
+        href="#contact"
+        class="btn btn-primary">
+        Contact Us
+      </a>
+
+      <a
+        href="#about"
+        class="btn btn-outline">
+        Learn More
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>About Us</h2>
+
+        <p>
+          Get to know THE EBY BRAND AND VENTURES.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <h3>
+            Welcome to THE EBY BRAND AND VENTURES
+          </h3>
+
+          <p>
+            THE EBY BRAND AND VENTURES is a
+            customer-focused business committed
+            to delivering quality, reliability and
+            professional service.
+          </p>
+
+          <p>
+            Our goal is to build lasting relationships
+            with our customers by providing products
+            and services they can trust.
+          </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+          <h3>Our Commitment</h3>
+
+          <p>
+            We believe that every customer deserves
+            quality service, honest communication and
+            a positive business experience.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>What We Do</h2>
+
+        <p>
+          We are committed to serving our customers
+          with professionalism and dedication.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            EB
+          </div>
+
+          <h3>Quality</h3>
+
+          <p>
+            We focus on delivering quality products
+            and services that meet customer expectations.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            ✓
+          </div>
+
+          <h3>Reliability</h3>
+
+          <p>
+            We strive to build trust through dependable
+            service and consistent business practices.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            ★
+          </div>
+
+          <h3>Customer Service</h3>
+
+          <p>
+            Our customers are important to us, and we
+            aim to provide a smooth and positive experience.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us" id="why-us">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Why Choose Us?</h2>
+
+        <p>
+          Our approach is built around the things
+          that matter most to our customers.
+        </p>
+
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+
+          <div class="number">01</div>
+
+          <h3>Trust</h3>
+
+          <p>
+            We value honest and dependable
+            business relationships.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="number">02</div>
+
+          <h3>Quality</h3>
+
+          <p>
+            We maintain a strong focus on
+            quality and customer satisfaction.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="number">03</div>
+
+          <h3>Professionalism</h3>
+
+          <p>
+            We approach our work with
+            professionalism and dedication.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="number">04</div>
+
+          <h3>Commitment</h3>
+
+          <p>
+            We are committed to creating
+            long-term value for our customers.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+          Have an enquiry or want to learn more
+          about THE EBY BRAND AND VENTURES?
+          Send us an email and we'll be happy to
+          hear from you.
+        </p>
+
+        <a
+          class="email"
+          href="mailto:THEEBYBRANDVENTURES@GMAIL.COM">
+          THEEBYBRANDVENTURES@GMAIL.COM
+        </a>
+
+        <br>
+
+        <a
+          href="mailto:THEEBYBRANDVENTURES@GMAIL.COM"
+          class="btn btn-primary">
+          Send Us an Email
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © <span id="year"></span>
+      <strong>THE EBY BRAND AND VENTURES</strong>.
+      All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
